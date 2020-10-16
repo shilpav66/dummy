@@ -1,4 +1,5 @@
-CREATE TABLE Test_Jenkins(
-    name varchar(20),
-    email varchar(20),
+CREATE TABLE TEST_JENKINS_T
+(
+  NAME  VARCHAR2(25 CHAR)             NOT NULL,
+  EMAIL VARCHAR2(50 CHAR),
 );
