@@ -1,13 +1,14 @@
-CREATE PACKAGE Test AS  -- bodiless package
-   TYPE TimeRec IS RECORD (
-      minutes SMALLINT,
-      hours   SMALLINT);
-   TYPE TransRec IS RECORD (
-      category VARCHAR2(10),
-      account  INT,
-      amount   REAL,
-      time_of  TimeRec);
-   minimum_balance    CONSTANT REAL := 10.00;
-   number_processed   INT;
-   insufficient_funds EXCEPTION;
-END Test;
+CREATE PACKAGE Test_jenkins AS
+   
+END Test_jenkins;
+/
+CREATE PACKAGE BODY Test_jenkins AS
+-- the following parameter declaration raises an exception 
+-- because 'DATE' does not match employees.hire_date%TYPE
+-- PROCEDURE calc_bonus (date_hired DATE) IS
+-- the following is correct because there is an exact match
+   BEGIN
+     DBMS_OUTPUT.PUT_LINE('Employees hired on ' || date_hired || ' get bonus.');
+   END;
+END Test_jenkins;
+/
