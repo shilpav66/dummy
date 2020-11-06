@@ -1,6 +1,7 @@
+Pipeline{
 node('master') {
     stage('SCM') {
     git branch: 'master',url: 'https://github.com/shilpav66/dummy.git'
     }
-    stage('build') {
-  }
+   }
+   }
