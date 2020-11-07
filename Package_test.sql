@@ -1,5 +1,5 @@
 --
--- TEST_Scipt  (Package) 
+-- TEST_Scipt  (Packaging) 
 --
 CREATE OR REPLACE PACKAGE Test_Scipt
 AS
