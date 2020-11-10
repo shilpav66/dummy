@@ -1,7 +1,7 @@
 --
 -- TEST_Scipt  (Packaging) 
 --
-CREATE OR REPLACE PACKAGE TEST_Scipt
+CREATE OR REPLACE PACKAGE 
 AS
 /******************************************************************************
    NAME:       test
