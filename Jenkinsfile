@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('6T') {
+    stage('Build') {
       parallel {
-        stage('Build') {
+        stage('6T') {
           steps {
             script {
               step([$class: 'SQLPlusRunnerBuilder', credentialsId: 'DB_login',
@@ -25,6 +25,16 @@ pipeline {
           }
 
         }
+      }
+
+    }
+  }
+
+  stage('Test') {
+    steps {
+      script {
+        bat script:'pytest --html=report.html --disable-warnings --cov=test_scripts .'
+        publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, includes: '**/*', keepAll: false, reportDir: 'C:\\Users\\shilv\\.jenkins\\workspace\\Database_deploy_pipe', reportFiles: 'report.html', reportName: 'HTML Report'])
       }
 
     }
