@@ -19,7 +19,7 @@ pipeline {
             script {
               step([$class: 'SQLPlusRunnerBuilder', credentialsId: 'DB_login',
               customOracleHome: '', customSQLPlusHome: '', customTNSAdmin: '',
-              instance: 'PTGPS6T.ikeadt.com', script: 'Package_test.sql',
+              instance: 'PTGPS3T.ikeadt.com', script: 'Package_test.sql',
               //scriptContent: 'ALTER PACKAGE TEST_SCIPT COMPILE PACKAGE', scriptType: 'file'
             ])
           }
