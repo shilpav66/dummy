@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       parallel {
-        stage('6T') {
+        stage('PTGPS6T') {
           steps {
             script {
               step([$class: 'SQLPlusRunnerBuilder', credentialsId: 'DB_login',
