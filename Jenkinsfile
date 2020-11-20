@@ -14,7 +14,7 @@ pipeline {
           }
         }
 
-        stage('3T') {
+        stage('PTGPS3T') {
           steps {
             script {
               step([$class: 'SQLPlusRunnerBuilder', credentialsId: 'DB_login',
